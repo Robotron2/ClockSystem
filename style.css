@@ -1,0 +1,72 @@
+body{
+    background-color: #10171f;
+}
+.container-fluid{
+    padding: 5%;
+}
+.container{
+    padding: 5%;
+    border: 2px solid;
+    max-width: 400px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #eba54c;
+}
+.container:hover{
+    padding: 6%;
+    
+}
+
+#displayTime{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 6vw;
+    background-clip: text;
+    color: #fff;
+}
+
+/* Remember media query here */
+.count-cont, .stop-cont, .alarm-cont{
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    display: inline-block;
+}
+.countdown-container, .stopwatch-container, .alarm-container{
+    padding: 2%;
+    /* border: 2px solid; */
+}
+
+.countdown-input,
+#alarm-output-hr, 
+#alarm-output-min, 
+#alarm-output-sec{
+    padding: 2%;
+    max-width: 160px;
+    
+}
+#mywatchhr,
+#mywatchmin,
+#mywatchsec,
+#mywatchmillisec{
+    max-width: 50px;
+}
+.containerbtn{
+    margin-top:2% ;
+}
+
+.btn{
+    max-width: 100px;
+    font-size: 0.96rem;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-left: 1%;
+    margin-right: 1%;
+    text-align: center;
+    
+}
+.btn:hover{
+    background-color: #10171f;
+    color: #eba54c;
+}
+
+

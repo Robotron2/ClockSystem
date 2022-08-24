@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.css"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Aboreto&family=Orbitron&family=Roboto:wght@300&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Digital clock</title>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <center>
+                <div id="displayTime"></div>
+                <div class="container count-cont col-lg-4 col-md-6 col-sm-12">
+                    <div class="countdown-container">
+                        <center>
+                            <input type="number" name="" id="userInputHr" class="rounded countdown-input" min="0"
+                                max="12" placeholder="Hr">
+                            <input type="number" name="" id="userInputMin" class="rounded countdown-input" min="0"
+                                max="12" placeholder="Min">
+                            <input type="number" name="" id="userInputSec" class="rounded countdown-input" min="0"
+                                max="12" required placeholder="Sec">
+                        </center>
+                        <div class="containerbtn">
+                            <center>
+                                <button onclick="countDown()" class="btn btn-lg btn-outline-dark ">Start</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <!-- Stopwatch section -->
+                <div class="container stop-cont col-lg-4 col-md-6 col-sm-12">
+                    <div class="stopwatch-container">
+                        <center>
+                            <input type="number" name="" id="mywatchhr" class="rounded" required placeholder="Hr"
+                                value="00">
+                            <input type="number" name="" id="mywatchmin" class="rounded" required placeholder="Min"
+                                value="00">
+                            <input type="number" name="" id="mywatchsec" class="rounded" required placeholder="Sec"
+                                value="00">
+                            <input type="number" name="" id="mywatchmillisec" class="rounded" required placeholder="ms"
+                                value="00">
+                        </center>
+                        <div class="containerbtn">
+                            <center>
+                                <button onclick="startWatch()" class="btn btn-lg btn-outline-dark ">Start</button>
+                                <button onclick="isPaused()" class="btn btn-lg btn-outline-dark ">Pause</button>
+                                <button class="btn btn-lg btn-outline-dark ">Stop</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <!-- Alarm Section -->
+                <div class="container alarm-cont col-lg-4 col-md-6 col-sm-12">
+                    <div class="alarm-container">
+                        <center>
+                            <input type="number" name="" id="alarm-output-hr" class="rounded" min="0" max="12" required
+                                placeholder="Hr">
+                            <input type="number" name="" id="alarm-output-min" class="rounded" min="0" max="60" required
+                                placeholder="Min">
+                            <input type="number" name="" id="alarm-output-sec" class="rounded" min="0" max="60" required
+                                placeholder="Sec">
+                        </center>
+                        <div class="containerbtn">
+                            <center>
+                                <button class="btn btn-lg btn-outline-dark ">Set </button>
+                                <button class="btn btn-lg btn-outline-dark ">Stop </button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
+
+</html>
