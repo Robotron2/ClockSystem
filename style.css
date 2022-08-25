@@ -14,7 +14,7 @@ body{
     background-color: #eba54c;
 }
 .container:hover{
-    padding: 6%;
+    padding: 5.1%;
     
 }
 
@@ -35,13 +35,16 @@ body{
     padding: 2%;
     /* border: 2px solid; */
 }
-
+.div-title{
+    color: #10171f;
+    margin-top: -1% !important;
+}
 .countdown-input,
 #alarm-output-hr, 
 #alarm-output-min, 
 #alarm-output-sec{
     padding: 2%;
-    max-width: 160px;
+    max-width: 56px;
     
 }
 #mywatchhr,

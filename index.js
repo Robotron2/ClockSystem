@@ -9,6 +9,7 @@ const clock = () => {
     displayDiv.innerHTML = `${currentHour} : ${currentMin} : ${currentSec}`
 }
 
+// Let us concatenate a leading zero everytime sec, min or hr is less than 10
 const formatTime = (currentTime) => {
     if (currentTime < 10) {
         return `0 ${currentTime}`
@@ -17,6 +18,8 @@ const formatTime = (currentTime) => {
 }
 setInterval(clock, 1000)
 
+//Our Sound to be played once the countdown reaches zero.
+// let newSound = new Audio()
 //Countdown Section
 const countDown = () => {
     //Get all the inputs.
@@ -43,6 +46,12 @@ const countDown = () => {
     // And we reduce the the minute also.
     if (countedUserSec < 0 && countedUserMin > 0) {
         userInputMin.value--
+    }
+    // When the hour box is greater than zero, we want both minute and seconds boxes to return to 59
+    if (countedUserSec < 0 && userInputMin.value >= 0 && countedUserHour > 0 ) {
+        userInputSec.value = 59;
+        userInputMin.value = 59
+        userInputHr.value--
     }
 }
 
