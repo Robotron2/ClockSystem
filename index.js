@@ -79,6 +79,35 @@ const startWatch = () => {
     }
 }
 
+// Pause watch
+const isPaused = () => {
+    let currentWatchHr = mywatchhr.value;
+    let currentWatchMin = mywatchmin.value;
+    let currentWatchSec= mywatchsec.value;
+    let currentWatchMilliSec = mywatchmillisec.value;
+    
+    console.log(mywatchsec.value)
+    let timeCondition = false
+    if (timeCondition == false) {
+        clearTimeout(timeout)
+        // mywatchsec.value = currentWatchSec
+        console.log("I have been paused")
+        console.log(`${currentWatchHr} : ${currentWatchMin} : ${currentWatchSec} : ${currentWatchMilliSec}`)
+    }
+}
+
+
+//Reset watch
+const resetWatch = () => {
+    clearTimeout(timeout)
+    mywatchhr.value = "00";
+    mywatchmin.value = "00";
+    mywatchsec.value = "00";
+    mywatchmillisec.value = "00";
+
+
+}
+
 
 
 
