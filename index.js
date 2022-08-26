@@ -58,7 +58,7 @@ const countDown = () => {
 // Stopwatch Section
 
 // The specified value "0 4" cannot be parsed, or is out of range.
-
+// Start Watch
 const startWatch = () => {
     mywatchmillisec.value++
     timeout = setTimeout(startWatch, 10);
@@ -81,6 +81,7 @@ const startWatch = () => {
 
 // Pause watch
 const isPaused = () => {
+<<<<<<< HEAD
     let currentWatchHr = mywatchhr.value;
     let currentWatchMin = mywatchmin.value;
     let currentWatchSec= mywatchsec.value;
@@ -108,6 +109,124 @@ const resetWatch = () => {
 
 }
 
+=======
+    let timeCondition = false
+    if (timeCondition == false) {
+        clearTimeout(timeout)
+    }
+}
 
+//Reset watch
+const resetWatch = () => {
+    clearTimeout(timeout)
+    mywatchhr.value = "00";
+    mywatchmin.value = "00";
+    mywatchsec.value = "00";
+    mywatchmillisec.value = "00";
+}
+
+//Alarm Section
+
+let mySound = new Audio("audio1.mp3")
+
+const setAlarm = ()=>{
+    let alarmTime = new Date()
+    let alarmHour = alarmHr.value
+    let alarmMinutes = alarmMin.value
+    if(alarmHour == alarmTime.getHours() && alarmMinutes == alarmTime.getMinutes()){
+      mySound.play()
+      // alert('Answer this question')
+      // setInterval(myAudio,1000)
+    }
+    else{
+        setTimeout(setAlarm,1000)
+    }
+
+}
+const stopAlarm = ()=>{
+    let alarmQuestion = Math.floor(Math.random() * 10000)
+    let alarmAnswer = prompt(`Prove that you are awake: Type this number(s):  ${alarmQuestion}`)
+    if (alarmAnswer == alarmQuestion) {
+        alarmHr.value = ""
+        alarmMin.value = ""
+        mySound.pause()
+    }
+    else{
+        mySound.play()
+        setTimeout(5000)
+    }
+
+}
+>>>>>>> reset-featutre-and-format-time
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  10 : 47 : 0 0
+//  10 : 47 : 0 1
+//  10 : 47 : 0 2
+//  10 : 47 : 0 3
+//  10 : 47 : 0 4
+//  10 : 47 : 0 5
+//  10 : 47 : 0 6
+//  10 : 47 : 0 7
+//  10 : 47 : 0 8
+//  10 : 47 : 0 9
+//  10 : 47 : 10
+//  10 : 47 : 11
+//  10 : 47 : 12
+//  10 : 47 : 13
+//  10 : 47 : 14
+//  10 : 47 : 15
+//  10 : 47 : 16
+//  10 : 47 : 17
+//  10 : 47 : 18
+//  10 : 47 : 19
+//  10 : 47 : 20
+//  10 : 47 : 21
 
 
