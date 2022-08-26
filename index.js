@@ -107,50 +107,59 @@ const resetWatch = () => {
 }
 
 //Alarm Section
-const setAlarm = () => {
-    
-    // let alarmSetHour = formatTime(alarmHr.value)
-    // let alarmSetMin = formatTime(alarmMin.value)
-    // let alarmSetSec = formatTime(alarmSec.value)
-    
-    // alarmSec.value =formatTime(alarmSetSec) 
-    // console.log(alarmSec.value)
-    let A = "0"
-    let B = alarmSec.value
-    let C = alarmMin.value
-    let D = alarmHr.value
-    // if (B.length < 2) {
-    //    B = `A${B}`
-    //    alarmSec.value = B
-    //    //    console.log(`Alarm is set at ${D} : ${C} : ${B}`)
-    // }
-    // if (C < 10) {
-    //    C = A + C 
-    //    alarmMin.value = C
-    // }
-    // if (D < 10) {
-    //     D = A + D
-    //     alarmHr.value = D
-    // }
-    // return B
-    let setTime = `${D} : ${C} : ${B}`
-    let realTime = new Date()
-    let realHour = formatTime(realTime.getHours());
-    let realMin = formatTime(realTime.getMinutes());
-    let realSec = formatTime(realTime.getSeconds());
-    let timeToAlarm = `${realHour} : ${realMin} : ${realSec}`
-    if (setTime == timeToAlarm) {
-       console.log(setTime) 
-    }
-    else{
-        setTimeout(setAlarm, 1000)
-    }
-
-}
 
 
 
-// 10 : 47 : 0 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  10 : 47 : 0 0
 //  10 : 47 : 0 1
 //  10 : 47 : 0 2
 //  10 : 47 : 0 3
