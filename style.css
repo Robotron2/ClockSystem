@@ -1,17 +1,25 @@
 body{
-    background-color: #10171f;
+    /* background-color: #10171f; */
+    background-image: url("clock5.jpg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    animation: myBody 60s infinite;
+}
+h4{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
 }
 .container-fluid{
     padding: 5%;
 }
 .container{
     padding: 5%;
-    border: 2px solid;
-    max-width: 400px;
+    border: 2px solid #355568;
+    max-width: 450px;
     margin-top: 20px;
     margin-right: 10px;
     margin-left: 10px;
-    background-color: #eba54c;
+    background-color: #355568;
 }
 .container:hover{
     padding: 5.1%;
@@ -19,38 +27,70 @@ body{
 }
 
 #displayTime{
-    font-family: 'Orbitron', sans-serif;
-    font-size: 6vw;
+    font-family: 'Digital Numbers', sans-serif; 
+    font-size: 6vw;                   
     background-clip: text;
-    color: #fff;
+    /* color: #fff; */
+    color: #355568;
+    animation: myTimemove 10s ;
 }
+
 
 /* Remember media query here */
 .count-cont, .stop-cont, .alarm-cont{
     border-top-left-radius: 10%;
     border-bottom-right-radius: 10%;
     display: inline-block;
+      
 }
+.count-cont:hover, .stop-cont:hover, .alarm-cont:hover{
+    animation: mycontainers 10s infinite;
+}
+
+
 .countdown-container, .stopwatch-container, .alarm-container{
     padding: 2%;
     /* border: 2px solid; */
+    
 }
+.countdown-container:hover, .stop-cont :hover, .alarm-container:hover{
+    animation: mymove 5s infinite;
+}
+
+@keyframes mycontainers {
+    50%{border-top-right-radius: 12%; border-bottom-left-radius: 12%; border-top-left-radius: 0%; border-bottom-right-radius: 0%;}
+}
+
+@keyframes mymove {
+    50% {box-shadow: 10px 10px 20px grey;} 
+}
+@keyframes myBody {
+    50% {background-position: center;}
+}
+
+@keyframes myTimemove {
+    from{color: #fff; font-size: 3vw;}
+    to{color: #355568; font-size: 6vw;}
+}
+
 .div-title{
     color: #10171f;
     margin-top: -1% !important;
 }
 .countdown-input,
-#alarm-output-hr, 
-#alarm-output-min, 
-#alarm-output-sec{
+#alarmHr, 
+#alarmMin, 
+#alarmSec{
     padding: 2%;
     max-width: 56px;
+    font-family: 'Digital Numbers', sans-serif;
     
 }
 #mywatchhr,
 #mywatchmin,
 #mywatchsec,
 #mywatchmillisec{
+    font-family: 'Digital Numbers', sans-serif;
     max-width: 50px;
 }
 .containerbtn{

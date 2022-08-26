@@ -10,9 +10,10 @@
         <!-- <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.css"> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Aboreto&family=Orbitron&family=Roboto:wght@300&display=swap"
-            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="http://fonts.cdnfonts.com/css/digital-numbers" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <title>Digital clock</title>
     </head>
@@ -74,16 +75,20 @@
                             <div class="div-title">
                                 <h4>Alarm ⏰</h4>
                             </div>
-                            <input type="number" name="" id="alarm-output-hr" class="rounded" min="0" max="12" required
+                            <input type="number" name="" id="alarmHr" class="rounded" min="0" max="12" required
                                 placeholder="Hr">
-                            <input type="number" name="" id="alarm-output-min" class="rounded" min="0" max="60" required
+                            <input type="number" name="" id="alarmMin" class="rounded" min="0" max="60" required
                                 placeholder="Min">
-                            <input type="number" name="" id="alarm-output-sec" class="rounded" min="0" max="60" required
+                            <input type="number" name="" id="alarmSec" class="rounded" min="0" max="60" required
                                 placeholder="Sec">
+                            <select name="AM/PM" id="zone">
+                                <option id="morning" value="morning">AM</option>
+                                <option id="night" value="night">PM</option>
+                            </select>
                         </center>
                         <div class="containerbtn">
                             <center>
-                                <button class="btn btn-lg btn-outline-dark ">Set </button>
+                                <button onclick="setAlarm()" class="btn btn-lg btn-outline-dark ">Set </button>
                                 <button class="btn btn-lg btn-outline-dark ">Stop </button>
                             </center>
                         </div>
@@ -91,6 +96,9 @@
                 </div>
             </center>
         </div>
+        <!-- <center>
+            <footer id="footer-Section" style="color: white; padding: 3%;">ROBOTRON 2022</footer>
+        </center> -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
             crossorigin="anonymous"></script>
