@@ -58,7 +58,7 @@ const countDown = () => {
 // Stopwatch Section
 
 // The specified value "0 4" cannot be parsed, or is out of range.
-
+// Start Watch
 const startWatch = () => {
     mywatchmillisec.value++
     timeout = setTimeout(startWatch, 10);
@@ -81,21 +81,11 @@ const startWatch = () => {
 
 // Pause watch
 const isPaused = () => {
-    let currentWatchHr = mywatchhr.value;
-    let currentWatchMin = mywatchmin.value;
-    let currentWatchSec= mywatchsec.value;
-    let currentWatchMilliSec = mywatchmillisec.value;
-    
-    console.log(mywatchsec.value)
     let timeCondition = false
     if (timeCondition == false) {
         clearTimeout(timeout)
-        // mywatchsec.value = currentWatchSec
-        console.log("I have been paused")
-        console.log(`${currentWatchHr} : ${currentWatchMin} : ${currentWatchSec} : ${currentWatchMilliSec}`)
     }
 }
-
 
 //Reset watch
 const resetWatch = () => {
@@ -108,9 +98,36 @@ const resetWatch = () => {
 
 //Alarm Section
 
+let mySound = new Audio("audio1.mp3")
 
+const setAlarm = ()=>{
+    let alarmTime = new Date()
+    let alarmHour = alarmHr.value
+    let alarmMinutes = alarmMin.value
+    if(alarmHour == alarmTime.getHours() && alarmMinutes == alarmTime.getMinutes()){
+      mySound.play()
+      // alert('Answer this question')
+      // setInterval(myAudio,1000)
+    }
+    else{
+        setTimeout(setAlarm,1000)
+    }
 
+}
+const stopAlarm = ()=>{
+    let alarmQuestion = Math.floor(Math.random() * 10000)
+    let alarmAnswer = prompt(`Prove that you are awake: Type this number(s):  ${alarmQuestion}`)
+    if (alarmAnswer == alarmQuestion) {
+        alarmHr.value = ""
+        alarmMin.value = ""
+        mySound.pause()
+    }
+    else{
+        mySound.play()
+        setTimeout(5000)
+    }
 
+}
 
 
 
