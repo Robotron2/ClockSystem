@@ -81,35 +81,6 @@ const startWatch = () => {
 
 // Pause watch
 const isPaused = () => {
-<<<<<<< HEAD
-    let currentWatchHr = mywatchhr.value;
-    let currentWatchMin = mywatchmin.value;
-    let currentWatchSec= mywatchsec.value;
-    let currentWatchMilliSec = mywatchmillisec.value;
-    
-    console.log(mywatchsec.value)
-    let timeCondition = false
-    if (timeCondition == false) {
-        clearTimeout(timeout)
-        // mywatchsec.value = currentWatchSec
-        console.log("I have been paused")
-        console.log(`${currentWatchHr} : ${currentWatchMin} : ${currentWatchSec} : ${currentWatchMilliSec}`)
-    }
-}
-
-
-//Reset watch
-const resetWatch = () => {
-    clearTimeout(timeout)
-    mywatchhr.value = "00";
-    mywatchmin.value = "00";
-    mywatchsec.value = "00";
-    mywatchmillisec.value = "00";
-
-
-}
-
-=======
     let timeCondition = false
     if (timeCondition == false) {
         clearTimeout(timeout)
@@ -135,13 +106,10 @@ const setAlarm = ()=>{
     let alarmMinutes = alarmMin.value
     if(alarmHour == alarmTime.getHours() && alarmMinutes == alarmTime.getMinutes()){
       mySound.play()
-      // alert('Answer this question')
-      // setInterval(myAudio,1000)
     }
     else{
         setTimeout(setAlarm,1000)
     }
-
 }
 const stopAlarm = ()=>{
     let alarmQuestion = Math.floor(Math.random() * 10000)
@@ -155,9 +123,8 @@ const stopAlarm = ()=>{
         mySound.play()
         setTimeout(5000)
     }
-
 }
->>>>>>> reset-featutre-and-format-time
+
 
 
 
