@@ -1,5 +1,6 @@
 body{
     background-color: #10171f;
+    padding-bottom: 3%;
 }
 .container-fluid{
     padding: 5%;
@@ -71,5 +72,3 @@ body{
     background-color: #10171f;
     color: #eba54c;
 }
-
-

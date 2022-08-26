@@ -81,31 +81,33 @@ const startWatch = () => {
 
 // Pause watch
 const isPaused = () => {
-    let currentWatchHr = formatTime(mywatchhr.value)
-    let currentWatchMin = formatTime(mywatchmin.value)
-    let currentWatchSec= formatTime(mywatchsec.value);
-    let currentWatchMilliSec = formatTime(mywatchmillisec.value);
+    let currentWatchHr = mywatchhr.value;
+    let currentWatchMin = mywatchmin.value;
+    let currentWatchSec= mywatchsec.value;
+    let currentWatchMilliSec = mywatchmillisec.value;
     
     console.log(mywatchsec.value)
     let timeCondition = false
     if (timeCondition == false) {
         clearTimeout(timeout)
-        mywatchsec.value = currentWatchSec
+        // mywatchsec.value = currentWatchSec
         console.log("I have been paused")
         console.log(`${currentWatchHr} : ${currentWatchMin} : ${currentWatchSec} : ${currentWatchMilliSec}`)
     }
-    // currentWatchHr = formatTime(mywatchhr.value)
-    // currentWatchMin = formatTime(mywatchmin.value);
-    // currentWatchSec = formatTime(mywatchsec.value);
-    // currentWatchMilliSec = formatTime(mywatchmillisec.value); 
-    // console.log(mywatchsec.value)
 }
 
-// Continue watch
 
-//Stop watch
+//Reset watch
+const resetWatch = () => {
+    clearTimeout(timeout)
+    mywatchhr.value = "00";
+    mywatchmin.value = "00";
+    mywatchsec.value = "00";
+    mywatchmillisec.value = "00";
 
-Orbitron
+
+}
+
 
 
 
