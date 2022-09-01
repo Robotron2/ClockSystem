@@ -104,6 +104,9 @@ const setAlarm = ()=>{
     let alarmTime = new Date()
     let alarmHour = alarmHr.value
     let alarmMinutes = alarmMin.value
+    document.getElementById("disp").innerHTML = `Alarm is set to ${alarmHour} : ${alarmMinutes}`
+    document.getElementById("disp").style.visibility = "visible"
+    document.getElementsByClassName("alarmInput").style.visibility = "none"
     if(alarmHour == alarmTime.getHours() && alarmMinutes == alarmTime.getMinutes()){
       mySound.play()
     }
